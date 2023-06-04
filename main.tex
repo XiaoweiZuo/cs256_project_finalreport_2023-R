@@ -94,20 +94,14 @@ It’s created by Schopf, Tim and Braun, Daniel
 and Matthes, Florian, and using it in Evaluating
 Unsupervised Text Classification: Zero-shot and
 Similarity-based Approaches (Zhang et al., 2022).\\
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.5\textwidth]{Data_set_an.png}
-    \caption{Visualization of Medical Abstracts Dataset}
-    \label{fig:example}
-\end{figure}
+
 \noindent The number of data in the training set is 11550
 rows and 2888 rows in the testing set. Each rows
 contains 2 information: medical abstract and label.
 It’s an open source dataset and easily approachable. The dataset is sufficient large ,and
-notrivial. Therefore, It used as a resource to analyze the performance of models.
-
-\begin{table*}[h]
-
+notrivial. Therefore, It used as a resource to analyze the performance of models. The numerical information is shown in the table below.\\
+\begin{table}[ht]
+\resizebox{0.7\textwidth}{!}{\begin{minipage}{\textwidth}
 \begin{tabular}{|l|l|l|l|}
 \hline
                           & Mean Length & Min Length & Max Length \\ \hline
@@ -115,15 +109,22 @@ Training Set               & 1229.104                             & 170 &3999   
 Testing Set                        & 1236.908                                & 186  &3542    \\ \hline
 
 \end{tabular}
+\end{minipage}}
+\end{table}
 
-\end{table*}
 
-
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Data_set_an.png}
+    \caption{Visualization of Medical Abstracts Dataset}
+    \label{fig:example}
+\end{figure}
 
 
 
 \subsection{Data preprocessing}
-If you did any preprocessing, explain what you did (and why) here! 
+We eliminated stopwords from the corpus, stopwords in English are words that do not significantly contribute to the understanding of a sentence, their removal doesn't compromise the overall interpretation of the sentence. Also, we removed special characters like square brackets and other noisy text like URLs. Additionally, we remove the examples without labels.
+
 
 % \subsection{Data annotation}
 % If your project involves annotation, you may have started a pilot annotation experiment, annotating a few dozen or few hundred examples. What major issues have come up? Do you and your project partners agree or disagree on examples? Report interannotator agreement if applicable.
